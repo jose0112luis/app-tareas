@@ -9,3 +9,15 @@
     </div>
     <button>Agregar</button>
 </form>
+
+<ul>
+    {{#each tasks}}
+        <li>{{title}}</li>
+        <p>{{description}}</p>
+        <button>
+            edit
+        </button><button>
+            delete
+        </button>
+    {{/each}}
+</ul>
