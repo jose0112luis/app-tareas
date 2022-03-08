@@ -1,3 +1,11 @@
-<h1>Hello World</h1>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatibus ullam enim modi tempora, rerum vel quas alias adipisci doloremque.</p>
+<form action="/tasks/add" method="POST">
+    <div>
+        <label for="title">Escriba un Título:</label>
+        <input type="text" name="title" id="title" placeholder="Título">
+    </div>
+    <div>
+        <label for="description">Escriba una Descripción:</label>
+        <textarea name="description" id="description" placeholder="Descripción"></textarea>
+    </div>
+    <button>Agregar</button>
+</form>
