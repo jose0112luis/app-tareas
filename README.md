@@ -14,6 +14,9 @@ Este módulo nos va a permitir conectarnos con la BDD MongoDB y poder modelar lo
 ### morgan
 Morgan nos permite poder ver por consola las peticiones q van llegando al servidor. 
 
+### dotenv
+nos ayuda a poder utilizar variables de entorno a nuestros programas y podemos agrearlo a -gitignore para q si alguien ve mi repositorio no pueda ver el valor de mis variables.
+
 ## -- MODULOS PARA DESARROLLO --
 #### babel
 es un compilador de JavaScript. Con el compilador podemos convertir código actualizado de JavaScript (como sintaxis, llamar funciones, etc.) a código antiguo o código de versiones anteriores de NodeJS.
@@ -32,6 +35,12 @@ Nos permite ejecutar el código con sisntaxis nueva y tener todas las caracterí
 
 ### nodemon
 nos va ayudar a reiniciar el servidor automáticamente cada vez q hacemos un cambio
+
+*****
+## Enviroment Variables
+PORT =3000
+MONGODB_HOST =localhost
+MONGODB_DATABASE =crud-tareas
 
 ##### GIT - porciakso algun error de permisos agregar:
 (git push ..... --allow-unrelated-histories)
