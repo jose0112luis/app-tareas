@@ -22,8 +22,24 @@ router.get("/about", (req,res) => {
     res.render('about');
 });
 
-router.get("/edit", (req,res) => {
-    res.render('edit');
+router.get("/edit/:id", async (req,res) => {
+    try {
+        const task = await Task.findById(req.params.id).lean();
+        res.render('edit', {task: task});
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+router.post('/edit/:id', async (req,res) => {
+    const result = await Task.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect('/');
+});
+
+router.get('/delete/:id', async (req,res) => {
+    const id = req.params.id;
+    await Task.findByIdAndDelete(id);
+    res.redirect('/');
 });
 
 export default router;

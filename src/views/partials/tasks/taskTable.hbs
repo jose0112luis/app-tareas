@@ -1,7 +1,7 @@
 <table>
     <thead>
         <tr>
-            {{!-- <th>N.</th> --}}
+            <th>N.</th>
             <th>Título</th>
             <th>Descripción</th>
             <th>Acciones</th>
@@ -15,8 +15,8 @@
                 <td>{{description}}</td>
                 <td>
                     <button>Done</button>
-                    <button>Delete</button>
-                    <button>Update</button>
+                    <a href="/delete/{{_id}}">Eliminar</a>
+                    <a href="/edit/{{_id}}">Edit</a>
                 </td>
             </tr>
         {{/each}}
