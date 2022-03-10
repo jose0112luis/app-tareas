@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/jose0112luis/app-tareas#readme",
   "dependencies": {
+    "@babel/runtime": "^7.17.2",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
