@@ -48,3 +48,16 @@ MONGODB_DATABASE =crud-tareas
 ## npx 
 Es un comando de Node q se añadió en las últimas versiones, q es básicamente para q podamos ejecutar paquetes de Node q permitan recibir argumentos por ejm: 'npx babel-node src/index.js'
 *****
+
+### -- PARA DESPLIEGUE DE LA APP --
+Al utilizar babel tenemos q realizar algunas configuraciones adicionales:
+1. En el package.json en scripts agregar "build": "babel src -d dist".
+2. Luego ejecutar ese script con <b>*npm run build*</b>
+3. Esto creará un nuevo directorio llamado dist con los archivos de JavaScript de nuestro proyecto
+4. Ejecutamos la app desde el nuevo directorio con <b>*node dist/index.js*</b>
+5. Si nos da error de *regeneratorRuntime* tenemos q descargar un modulo más
+6. Ejecutamos: <b>*npm install --save-dev @babel/plugin-transform-runtime*</b>
+7. Volvemos a compilar con <b>*npm run build*</b> y ejecutar con <b>*node dist/index.js*</b>
+8. Vemos q hacen falta copiar algunos archivos en el directorio *dist/*
+9. Copiamos todos los archivos faltantes manualmente o con el módulo *ncp* (ncp [archivo] [destino]). Si se utiliza el modulo <b>*ncp* agregar al script del package.json *'&& ncp src/views dist/views && ncp src/public dist/public'*</b> quedando el script: *"build": "babel src -d dist && ncp src/views dist/views && ncp src/public dist/public"*
+10. Volvemos a compilar con <b>*npm run build*</b> y ejecutar con <b>*node dist/index.js*</b>
